@@ -1615,7 +1615,14 @@ exports.commands = {
 
 		return '/announce ' + target;
 	},
-	announcehelp: ["/announce OR /wall [message] - Makes an announcement. Requires: % @ # & ~"],
+			
+		gm: 'ghostmode'
+		ghostmode:  function (target, room, user) {
+	        if (ghostmode === 'true')
+	        user.resetName();
+	        
+		}
+		announcehelp: ["/announce OR /wall [message] - Makes an announcement. Requires: % @ # & ~"],
 
 	fr: 'forcerename',
 	forcerename: function (target, room, user) {
